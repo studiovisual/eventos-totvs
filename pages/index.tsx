@@ -7,19 +7,17 @@ import Seo from '../components/Seo'
 import styles from '../styles/Home.module.css'
 
 
-
-
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Seo title='Evento TOTVS' description='É um eventos TOTVS' />
-      <main>
+      <main className='h-full'>
         <div className='container'>
           <section id='header-main'>
             <h1 className='text-center pt-8 mb-8 text-3xl uppercase font-bold'>Todos os <span className='text-[#6B48FF]'>Eventos</span></h1>
           </section>
         </div>
-        <section id='filter'>
+        <section id='filter' className='mb-8'>
           <div >
             <div className='flex items-center justify-start h-8 pt-8 mb-9'>
               <Filter />
@@ -35,7 +33,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-        <section id='eventos'>
+        <section id='eventos' className='mb-8'>
           <Eventos />
         </section>
       </main>
