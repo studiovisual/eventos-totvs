@@ -7,6 +7,7 @@ import Seo from '../components/Seo'
 import styles from '../styles/Home.module.css'
 
 
+
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -34,6 +35,8 @@ const Home: NextPage = () => {
           </div>
         </section>
         <section id='eventos' className='mb-8'>
+          <Eventos />
+          <Eventos />
           <Eventos />
         </section>
       </main>
