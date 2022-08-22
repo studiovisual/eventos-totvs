@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Button from '../components/Button'
+import Eventos from '../components/Eventos'
 import Filter from '../components/Filter'
 import Filtros from '../components/Filtros'
 import Seo from '../components/Seo'
@@ -35,20 +36,7 @@ const Home: NextPage = () => {
           </div>
         </section>
         <section id='eventos'>
-          <div className='pt-8 border border-indigo-500 rounded-lg p-2.5 mt-6 h-96'>
-            <div className=''>
-              <img src="" alt="" />
-            </div>
-            <div>
-              <h5>Demonstrações</h5>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-              <p>00/00/2022</p>
-              <p>10:00 às 11:00</p>
-            </div>
-            <div className='text-center flex items-center justify-center'>
-              <Button text='Saiba Mais' />
-            </div>
-          </div>
+          <Eventos />
         </section>
       </main>
 
