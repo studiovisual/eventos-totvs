@@ -18,27 +18,29 @@ const Home: NextPage = () => {
             <h1 className='text-center pt-8 mb-8 text-3xl uppercase font-bold'>Todos os <span className='text-[#6B48FF]'>Eventos</span></h1>
           </section>
         </div>
-        <section id='filter' className='mb-8'>
-          <div >
-            <div className='flex items-center justify-start h-8 pt-8 mb-9'>
-              <Filter />
-              <h2 className='text-3xl ml-3 uppercase font-bold'>Filtro</h2>
-            </div>
-            <div className='border border-indigo-500 rounded-lg p-2.5 mt-6 h-96'>
-              <Filtros text='+ Demonstração' />
-              <Filtros text='+ Segmento' />
-              <Filtros text='+ Produto' />
-              <div className='text-center mx-7'>
-                <Button text='Filtrar' />
+        <div className='xl:flex gap-5'>
+          <section id='filter' className='mb-8 lg:w-64'>
+            <div >
+              <div className='flex items-center justify-start h-8 pt-8 mb-9 '>
+                <Filter />
+                <h2 className='text-3xl ml-3 uppercase font-bold'>Filtro</h2>
+              </div>
+              <div className='border border-indigo-500 rounded-lg p-2.5 mt-6 h-96'>
+                <Filtros text='+ Demonstração' />
+                <Filtros text='+ Segmento' />
+                <Filtros text='+ Produto' />
+                <div className='text-center mx-7'>
+                  <Button text='Filtrar' />
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-        <section id='eventos' className='mb-8'>
-          <Eventos />
-          <Eventos />
-          <Eventos />
-        </section>
+          </section>
+          <section id='eventos' className='mb-8 xl:flex gap-4'>
+            <Eventos />
+            <Eventos />
+            <Eventos />
+          </section>
+        </div>
       </main>
 
     </div>

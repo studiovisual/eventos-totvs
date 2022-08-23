@@ -1,6 +1,15 @@
 .container {
-  padding: 0 2rem;
+  padding: 0 5rem;
 }
+
+/* Responsive container 1536px */
+@media(min-width: 1536px) {
+  .container {
+    padding: 0 10rem;
+  }
+}
+
+/* --------------------------- */
 
 .footer {
   display: flex;
