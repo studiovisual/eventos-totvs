@@ -28,7 +28,7 @@ const Home: NextPage = () => {
               <Filtros text='+ Demonstração' />
               <Filtros text='+ Segmento' />
               <Filtros text='+ Produto' />
-              <div className='text-center flex items-center justify-center'>
+              <div className='text-center mx-7'>
                 <Button text='Filtrar' />
               </div>
             </div>

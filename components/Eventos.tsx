@@ -17,15 +17,16 @@ const Eventos = () => {
           </div>
         </div>
         <div className='h60 p-5'>
-          <h5 className='text-[#FEAC0E] font-bold text-sm'>Demonstrações</h5>
+          <h5 className='text-[#FEAC0E] font-bold text-sm uppercase'>Demonstrações</h5>
           <p className='text-lg font-bold'>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-          <div className="ml-9 mt-3">
-            <p className='text-sm'>00/00/2022</p>
-            <p className='text-sm'>10:00 às 11:00</p>
+          <div className=" mt-3">
+            <p className='ml-7 text-bold'>00/00/2022</p>
+            <p className='ml-7 text-bold'>10:00 às 11:00</p>
+            <div className='mx-7 text-center mb-8'>
+              <ButtonCover text='saiba mais' />
+            </div>
           </div>
-          <div className='text-center flex items-center justify-center mb-8'>
-            <ButtonCover text='saiba mais' />
-          </div>
+
         </div>
       </div>
     </>
