@@ -4,8 +4,9 @@ const Eventos = () => {
   return (
     <>
       <div className='border border-indigo-500 rounded-lg mb-8'>
-        <div className='h-40 bg-black rounded-t-lg p-5 relative'>
-          <div className="absolute right-0 mr-7 rounded-full bg-white h-10 w-10 "></div>
+        <div className='h-40 rounded-t-lg relative'>
+          <div className="absolute right-0 mr-7 rounded-full bg-white mt-5 h-10 w-10"></div>
+          <img className="rounded-t-lg w-full h-full object-cover" src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?cs=srgb&dl=pexels-thisisengineering-3861969.jpg&fm=jpg" alt="" />
           <div className='absolute right-0 bottom-0 mr-5 mb-5'>
             <div className='h-6 w-14 bg-indigo-600 rounded-t-lg'>
               <p className='text-white text-center uppercase'>Mês</p>

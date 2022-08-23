@@ -25,9 +25,9 @@ const Home: NextPage = () => {
               <h2 className='text-3xl ml-3 uppercase font-bold'>Filtro</h2>
             </div>
             <div className='border border-indigo-500 rounded-lg p-2.5 mt-6 h-96'>
-              <Filtros text='Demonstração' />
-              <Filtros text='Segmento' />
-              <Filtros text='Produto' />
+              <Filtros text='+ Demonstração' />
+              <Filtros text='+ Segmento' />
+              <Filtros text='+ Produto' />
               <div className='text-center flex items-center justify-center'>
                 <Button text='Filtrar' />
               </div>
