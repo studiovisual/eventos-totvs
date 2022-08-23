@@ -18,7 +18,7 @@ const Home: NextPage = () => {
             <h1 className='text-center pt-8 mb-8 text-3xl uppercase font-bold'>Todos os <span className='text-[#6B48FF]'>Eventos</span></h1>
           </section>
         </div>
-        <div className='xl:flex gap-5'>
+        <div className='md:flex gap-3 lg:flex grid-cols-3 gap-4 xl:flex gap-5 '>
           <section id='filter' className='mb-8 lg:w-64'>
             <div >
               <div className='flex items-center justify-start h-8 pt-8 mb-9 '>
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
               </div>
             </div>
           </section>
-          <section id='eventos' className='mb-8 xl:flex gap-4'>
+          <section id='eventos' className='mb-8 lg:grid grid-cols-2 xl:flex gap-4'>
             <Eventos />
             <Eventos />
             <Eventos />
