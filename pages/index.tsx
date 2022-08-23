@@ -36,7 +36,7 @@ const Home: NextPage = () => {
             </div>
           </section>
           <section id='eventos'>
-            <div className='mb-8 grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 gap-4'>
+            <div className='mb-8 grid sm:grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-4'>
               <Eventos />
               <Eventos />
               <Eventos />

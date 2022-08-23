@@ -24,11 +24,10 @@ const Eventos = () => {
           <div className=" mt-3">
             <p className='ml-7 text-bold'>00/00/2022</p>
             <p className='ml-7 text-bold'>10:00 às 11:00</p>
-            <div className='mx-7 text-center mb-8'>
+            <div className='text-center sm-8 mx-7 xl:m-0'>
               <ButtonCover text='saiba mais' />
             </div>
           </div>
-
         </div>
       </div>
     </>
