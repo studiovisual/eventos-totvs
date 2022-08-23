@@ -25,7 +25,7 @@ const Home: NextPage = () => {
                 <Filter />
                 <h2 className='text-3xl ml-3 uppercase font-bold text-principal-black'>Filtro</h2>
               </div>
-              <div className='border border-indigo-500 rounded-lg p-2.5 mt-6 h-96'>
+              <div className='border border-complementary-purple rounded-lg p-2.5 mt-6 h-96'>
                 <Filtros text='+ Demonstração' />
                 <Filtros text='+ Segmento' />
                 <Filtros text='+ Produto' />
