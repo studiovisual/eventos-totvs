@@ -3,6 +3,7 @@ import Button from '../components/Button'
 import Eventos from '../components/Eventos'
 import Filter from '../components/Filter'
 import Filtros from '../components/Filtros'
+import LinkFooter from '../components/LinkFooter'
 import Seo from '../components/Seo'
 import styles from '../styles/Home.module.css'
 
@@ -10,7 +11,7 @@ import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Seo title='Evento TOTVS' description='É um eventos TOTVS' />
       <main className='container h-full mb-[198px]'>
         <section id='header-main'>
@@ -46,7 +47,48 @@ const Home: NextPage = () => {
           </section>
         </div>
       </main>
-
+      <footer className='bg-principal-black'>
+        <div className='container h-full'>
+          <div className='content-main flex align-center justify-between'>
+            <img src="" alt="" />
+            <div className=''>
+              <h2>Sobre a Totvs</h2>
+              <LinkFooter text='Trabalhe Conosco' />
+              <LinkFooter text='Relações com investidores' />
+              <LinkFooter text='Eventos' />
+              <LinkFooter text='Manifesto Produtividade' />
+              <LinkFooter text='Treinamentos' />
+              <LinkFooter text='Encontre a Totvs' />
+              <LinkFooter text='Canais' />
+              <LinkFooter text='Certificações' />
+              <LinkFooter text='Ios' />
+              <LinkFooter text='Formação de talentos' />
+              <LinkFooter text='Idexo' />
+              <LinkFooter text='Politica de privacidade' />
+            </div>
+            <div>
+              <h2>Links úteis</h2>
+              <LinkFooter text='Blog de Totvs' />
+              <LinkFooter text='Portal de produtos' />
+              <LinkFooter text='cases' />
+              <LinkFooter text='Totvs de store' />
+              <LinkFooter text='marcar' />
+              <LinkFooter text='Canal de ética' />
+              <LinkFooter text='Suporte' />
+              <LinkFooter text='TDN' />
+              <LinkFooter text='Seja um parceiro' />
+            </div>
+            <div>
+              <h2>Fale conosco</h2>
+              <LinkFooter text='0800 70 98 100' />
+              <div>
+                redes sociais
+              </div>
+              <LinkFooter text='Assessoria de imprensa' />
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
