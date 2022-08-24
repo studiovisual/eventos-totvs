@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Seo title='Evento TOTVS' description='É um eventos TOTVS' />
-      <main className='container h-full'>
+      <main className='container h-full mb-[198px]'>
         <section id='header-main'>
           <h1 className='text-center pt-8 mb-8 text-3xl uppercase font-bold text-principal-black'>Todos os <span className='text-complementary-purple'>Eventos</span></h1>
         </section>
