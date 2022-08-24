@@ -12,13 +12,12 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Seo title='Evento TOTVS' description='É um eventos TOTVS' />
-      <main className='h-full'>
-        <div className='container'>
-          <section id='header-main'>
-            <h1 className='text-center pt-8 mb-8 text-3xl uppercase font-bold text-principal-black'>Todos os <span className='text-complementary-purple'>Eventos</span></h1>
-          </section>
-        </div>
-        <div className='md:flex gap-4'>
+      <main className='container h-full'>
+        <section id='header-main'>
+          <h1 className='text-center pt-8 mb-8 text-3xl uppercase font-bold text-principal-black'>Todos os <span className='text-complementary-purple'>Eventos</span></h1>
+        </section>
+        
+        <div className='grid grid-cols-1 lg:grid-cols-[255px_1fr] gap-[30px]'>
           <section id='filter' className='mb-8 lg:w-64'>
             <div >
               <div className='flex items-center justify-start h-8 pt-8 mb-9 '>
@@ -36,7 +35,7 @@ const Home: NextPage = () => {
             </div>
           </section>
           <section id='eventos'>
-            <div className='mb-8 grid sm:grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-4'>
+            <div className='mb-8 grid sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-x-[30px] gap-y-[48px]'>
               <Eventos />
               <Eventos />
               <Eventos />
