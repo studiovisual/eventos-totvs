@@ -84,7 +84,7 @@ const Home: NextPage = () => {
               <TitleFooter text='Fale conosco' />
               <LinkFooter text='0800 70 98 100' />
               <div>
-                <Social text='' />
+                <Social />
               </div>
               <LinkFooter text='Assessoria de imprensa' />
             </div>

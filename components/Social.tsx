@@ -1,11 +1,8 @@
-interface Props {
-  text: string
-}
 
-const Social = ({ text }: Props) => {
+const Social = () => {
   return (
-    <div >
-      <p className=''>{text}</p>
+    <div className=''>
+      <a href=""></a>
     </div>
   );
 };
