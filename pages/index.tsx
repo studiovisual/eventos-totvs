@@ -5,6 +5,8 @@ import Filter from '../components/Filter'
 import Filtros from '../components/Filtros'
 import LinkFooter from '../components/LinkFooter'
 import Seo from '../components/Seo'
+import Social from '../components/Social'
+import TitleFooter from '../components/TitleFooter'
 import styles from '../styles/Home.module.css'
 
 
@@ -48,11 +50,11 @@ const Home: NextPage = () => {
         </div>
       </main>
       <footer className='bg-principal-black'>
-        <div className='container h-full'>
+        <div className='container h-full p-[70px]'>
           <div className='content-main flex align-center justify-between'>
-            <img src="" alt="" />
+            <img className='logo-footer w-full max-w-[186px] h-[55px]' src="https://eventos.totvs.com/wp-content/uploads/2020/03/logo-1.png" alt="" />
             <div className=''>
-              <h2>Sobre a Totvs</h2>
+              <TitleFooter text='Sobre a Totvs' />
               <LinkFooter text='Trabalhe Conosco' />
               <LinkFooter text='Relações com investidores' />
               <LinkFooter text='Eventos' />
@@ -67,7 +69,7 @@ const Home: NextPage = () => {
               <LinkFooter text='Politica de privacidade' />
             </div>
             <div>
-              <h2>Links úteis</h2>
+              <TitleFooter text='Links úteis' />
               <LinkFooter text='Blog de Totvs' />
               <LinkFooter text='Portal de produtos' />
               <LinkFooter text='cases' />
@@ -78,11 +80,11 @@ const Home: NextPage = () => {
               <LinkFooter text='TDN' />
               <LinkFooter text='Seja um parceiro' />
             </div>
-            <div>
-              <h2>Fale conosco</h2>
+            <div className='text-end'>
+              <TitleFooter text='Fale conosco' />
               <LinkFooter text='0800 70 98 100' />
               <div>
-                redes sociais
+                <Social text='' />
               </div>
               <LinkFooter text='Assessoria de imprensa' />
             </div>
