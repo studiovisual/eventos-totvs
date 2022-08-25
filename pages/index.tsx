@@ -49,11 +49,11 @@ const Home: NextPage = () => {
           </section>
         </div>
       </main>
-      <footer className='bg-principal-black'>
-        <div className='container h-full p-[70px]'>
-          <div className='content-main flex align-center justify-between'>
-            <img className='logo-footer w-full max-w-[186px] h-[55px]' src="https://eventos.totvs.com/wp-content/uploads/2020/03/logo-1.png" alt="" />
-            <div className=''>
+      <footer className='bg-principal-black '>
+        <div className='container h-full py-[70px] flex align-center justify-center max-w-[1140px]'>
+          <div className='content-main grid grid-cols-1  md:grid-cols-4 gap-5 text-start'>
+            <img className='firt-content logo-footer w-full md:max-w-[186px] h-[55px] mb-[30px]' src="https://eventos.totvs.com/wp-content/uploads/2020/03/logo-1.png" alt="" />
+            <div className='second-content mb-[30px] text-center md:text-start  max-w-[285px]'>
               <TitleFooter text='Sobre a Totvs' />
               <LinkFooter text='Trabalhe Conosco' />
               <LinkFooter text='Relações com investidores' />
@@ -68,7 +68,7 @@ const Home: NextPage = () => {
               <LinkFooter text='Idexo' />
               <LinkFooter text='Politica de privacidade' />
             </div>
-            <div>
+            <div className='third-content mb-[30px] text-center md:text-start max-w-[285px]'>
               <TitleFooter text='Links úteis' />
               <LinkFooter text='Blog de Totvs' />
               <LinkFooter text='Portal de produtos' />
@@ -80,18 +80,23 @@ const Home: NextPage = () => {
               <LinkFooter text='TDN' />
               <LinkFooter text='Seja um parceiro' />
             </div>
-            <div className='text-end'>
-              <TitleFooter text='Fale conosco' />
-              <LinkFooter text='0800 70 98 100' />
-              <div>
+            <div className='fourth-content text-center md:text-end max-w-[285px]'>
+              <div className='mb-[24px]'>
+                <TitleFooter text='Fale conosco' />
+                <span className='text-white font-bold text-[23px] leading-[22px] px-[15px]'>0800 70 98 100</span>
+              </div>
+              <div className='grid grid-cols-4 gap-3 md:flex items-stretch justify-end w-full text-center px-[15px]'>
+                <Social />
+                <Social />
+                <Social />
                 <Social />
               </div>
-              <LinkFooter text='Assessoria de imprensa' />
+              <LinkFooter text='assessoria de imprensa' />
             </div>
           </div>
         </div>
-      </footer>
-    </div>
+      </footer >
+    </div >
   )
 }
 
