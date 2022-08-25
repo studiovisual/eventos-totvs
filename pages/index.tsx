@@ -83,14 +83,9 @@ const Home: NextPage = () => {
             <div className='fourth-content text-center md:text-end max-w-[285px]'>
               <div className='mb-[24px]'>
                 <TitleFooter text='Fale conosco' />
-                <span className='text-white font-bold text-[23px] leading-[22px] px-[15px]'>0800 70 98 100</span>
+                <span className='text-white font-bold text-[23px] leading-[22px] px-[7px]'>0800 70 98 100</span>
               </div>
-              <div className='grid grid-cols-4 gap-3 md:flex items-stretch justify-end w-full text-center px-[15px]'>
-                <Social />
-                <Social />
-                <Social />
-                <Social />
-              </div>
+              <Social />
               <LinkFooter text='assessoria de imprensa' />
             </div>
           </div>
