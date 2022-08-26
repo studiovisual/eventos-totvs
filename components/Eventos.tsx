@@ -3,7 +3,7 @@ import ButtonCover from "./buttonCover";
 const Eventos = () => {
   return (
     <>
-      <div className="border border-complementary-purple h-[421px] w-[255px] rounded-lg">
+      <div className="border border-complementary-purple w-full h-[421px] max-w-[255px] rounded-lg">
         <div className="rounded-t-lg relative">
           <div className="absolute right-0 mr-[26px] rounded-full bg-white mt-[20px] h-[35px] w-[35px] mb-[35px] ">
             <a className="h-[16px] flex align-center justify-center mt-[10px]" href="#"><img src="https://cdn-icons-png.flaticon.com/512/2028/2028252.png" alt="" /></a>

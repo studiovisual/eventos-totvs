@@ -9,29 +9,33 @@ import Social from '../components/Social'
 import TitleFooter from '../components/TitleFooter'
 import styles from '../styles/Home.module.css'
 
+{/* Importação de icons */ }
+import { FiFilter } from "react-icons/fi";
+
 
 
 const Home: NextPage = () => {
   return (
     <div>
       <Seo title='Evento TOTVS' description='É um eventos TOTVS' />
-      <main className='container h-full mb-[198px]'>
-        <section id='header-main'>
-          <h1 className='text-center pt-8 mb-8 text-3xl uppercase font-bold text-principal-black'>Todos os <span className='text-complementary-purple'>Eventos</span></h1>
+      <main className='container w-full h-full mb-[198px]'>
+        <section id='header-main max-w-[345px]'>
+          <h1 className='text-center text-[20px] pt-8 mb-8 uppercase font-bold text-principal-black  w-full  md:text-[32px] leading-[60px] '>Todos os <span className='text-complementary-purple'>Eventos</span></h1>
         </section>
-
         <div className='grid grid-cols-1 lg:grid-cols-[255px_1fr] gap-[30px]'>
           <section id='filter' className='mb-8 lg:w-64'>
             <div >
-              <div className='flex items-center justify-start h-8 pt-8 mb-9 '>
-                <Filter />
-                <h2 className='text-3xl ml-3 uppercase font-bold text-principal-black'>Filtro</h2>
+              <div className='flex items-center justify-start mb-[26px] text-[25px]'>
+                <FiFilter />
+                <h2 className='text-[26px] ml-[9px] leading-[32px] uppercase font-bold text-principal-black'>Filtro</h2>
               </div>
-              <div className='border border-complementary-purple rounded-lg p-2.5 mt-6 h-96'>
-                <Filtros text='+ Demonstração' />
-                <Filtros text='+ Segmento' />
-                <Filtros text='+ Produto' />
-                <div className='text-center mx-7'>
+              <div className='border border-complementary-purple  rounded-lg p-2.5 h-full w-full max-w-[255px]'>
+                <div className='mb-[38px]'>
+                  <Filtros text='Demonstração' />
+                  <Filtros text='Segmento' />
+                  <Filtros text='Produto' />
+                </div>
+                <div className='text-center mx-7 mb-[38px]'>
                   <Button text='Filtrar' />
                 </div>
               </div>

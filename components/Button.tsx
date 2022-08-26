@@ -4,9 +4,9 @@ interface Props {
 
 const Button = ({ text }: Props) => {
   return (
-    <div className="border border-secundare-orange rounded-full mt-8 transition delay-100 ease hover:bg-secundare-orange">
-      <a href="#"><p className='text-lg text-secundare-orange uppercase font-normal py-3 px-14 transition delay-100 ease hover:text-white' >{text}</p></a>
-    </div>
+    <a href="#" className="bg-white text-secundare-orange block border border-secundare-orange delay-100 ease font-normal hover:bg-secundare-orange hover:text-white leading-[19px] max-w-[170px] mx-auto p-2.5 rounded-full text-[16px] text-center  transition uppercase">
+      {text}
+    </a>
   );
 };
 
