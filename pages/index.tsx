@@ -15,9 +15,9 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Seo title='Evento TOTVS' description='É um eventos TOTVS' />
-      <main className='container h-full mb-[198px]'>
-        <section id='header-main'>
-          <h1 className='text-center pt-8 mb-8 text-3xl uppercase font-bold text-principal-black'>Todos os <span className='text-complementary-purple'>Eventos</span></h1>
+      <main className='container w-full h-full mb-[198px]'>
+        <section id='header-main max-w-[345px]'>
+          <h1 className='text-center text-[20px] pt-8 mb-8 uppercase font-bold text-principal-black  w-full  md:text-[32px] leading-[60px] '>Todos os <span className='text-complementary-purple'>Eventos</span></h1>
         </section>
         <div className='grid grid-cols-1 lg:grid-cols-[255px_1fr] gap-[30px]'>
           <section id='filter' className='mb-8 lg:w-64'>
