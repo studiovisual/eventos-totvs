@@ -1,3 +1,5 @@
+{/* Importação de icons */ }
+import { FaPlus } from "react-icons/fa";
 
 interface Props {
   text: string
@@ -5,9 +7,9 @@ interface Props {
 
 const Filtros = ({ text }: Props) => {
   return (
-    <div className="border-b-2 pb-3">
-      <img src="" alt="" />
-      <p className='pt-8 text-lg uppercase font-medium text-principal-black'>{text}</p>
+    <div className="flex items-center justify-start border-b-2  text-[15px] mx-[10px]">
+      <FaPlus />
+      <p className='text-[18px] p-[12px] leading-[22px] uppercase font-medium text-principal-black'>{text}</p>
     </div>
   );
 };
