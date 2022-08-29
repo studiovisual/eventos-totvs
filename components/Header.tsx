@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import ImageSlider from './ImageSlider';
 
+import { HiMenu } from 'react-icons/hi'
 
 const slides = [
   { url: 'https://106fls2rgkkyhcqs83jfq8ey-wpengine.netdna-ssl.com/wp-content/uploads/2020/07/banner-demos-v2.jpg', title: 'Imagem carrossel Totvz' },
@@ -15,7 +16,8 @@ export default function Header() {
           <div className='container w-full flex item-center justify-between md:h-[51px] max-w-[1106px]'>
             <img className='w-full max-w-[160px] h-[48px]' src="https://eventos.totvs.com/wp-content/uploads/2020/03/logo-1.png" alt="" />
             <div className='flex justify-between '>
-              <ul className='flex items-center justify-center gap-5 w-full text-white font-[15px] font-normal uppercase leading-[22px]'>
+              <HiMenu className='text-[50px] text-white md:hidden' />
+              <ul className='hidden md:flex items-center justify-center gap-5 w-full text-white font-[15px] font-normal uppercase leading-[22px]'>
                 <li>
                   <Link href="/"><a >Demostrações</a></Link>
                 </li>
@@ -34,7 +36,7 @@ export default function Header() {
         </div>
       </nav >
       <section className=''>
-        <div className='w-full h-[878px] m-0-auto'>
+        <div className='w-full h-[780px] m-0-auto'>
           <ImageSlider slides={slides} />
         </div>
       </section>
