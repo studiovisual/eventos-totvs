@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
+import { GoPrimitiveDot } from "react-icons/go"
 
 
 
@@ -18,13 +19,22 @@ const ImageSlider = ({ slides }) => {
     setCurrentIndex(newIndex)
   }
 
+  const goToSlide = slideIndex => {
+    setCurrentIndex(slideIndex)
+  }
+
   return (
     <div className="h-full relative" >
-      <div onClick={goToPrevious} className="leftArrow absolute top-1/2 left-[32px] font-[45px] text-white z-10 cursor-pointer"><BsArrowLeftCircle /></div>
-      <div onClick={goToNext} className="rightArrow absolute top-1/2 right-[32px] font-[45px] text-white z-10 cursor-pointer"><BsArrowRightCircle /></div>
+      <div onClick={goToPrevious} className="leftArrow absolute top-1/2 left-[100px] text-[30px] text-white z-10 cursor-pointer"><BsArrowLeftCircle /></div>
+      <div onClick={goToNext} className="rightArrow absolute top-1/2 right-[100px] text-[30px] text-white z-10 cursor-pointer"><BsArrowRightCircle /></div>
       <div className="w-full h-full bg-center bg-cover"
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
       ></div>
+      <div className="flex items-center justify-center absolute z-10 top-[90%] left-[50%]">
+        {slides.map((slide, slideIndex) =>
+          <div onClick={() => goToSlide(slideIndex)} className=" flex justify-center cursor-pointer my-[3px] text-[20px] text-white" key={slideIndex}><GoPrimitiveDot /> </div>
+        )}
+      </div>
     </div>
   )
 }
