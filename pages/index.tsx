@@ -1,16 +1,16 @@
 import type { NextPage } from 'next'
 import Button from '../components/Button'
 import Eventos from '../components/Eventos'
-import Filter from '../components/Filter'
 import Filtros from '../components/Filtros'
 import LinkFooter from '../components/LinkFooter'
 import Seo from '../components/Seo'
 import Social from '../components/Social'
 import TitleFooter from '../components/TitleFooter'
-import styles from '../styles/Home.module.css'
+import Header from '../components/Header'
 
 {/* Importação de icons */ }
 import { FiFilter } from "react-icons/fi";
+
 
 
 
@@ -18,7 +18,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Seo title='Evento TOTVS' description='É um eventos TOTVS' />
-      <header />
+      <Header />
       <main className='container w-full h-full mb-[198px]'>
         <section id='header-main max-w-[345px]'>
           <h1 className='text-center text-[20px] pt-8 mb-8 uppercase font-bold text-principal-black  w-full  md:text-[32px] leading-[60px] '>Todos os <span className='text-complementary-purple'>Eventos</span></h1>
