@@ -8,6 +8,7 @@ import Social from '../components/Social'
 import TitleFooter from '../components/TitleFooter'
 import Header from '../components/Header'
 
+
 {/* Importação de icons */ }
 import { FiFilter } from "react-icons/fi";
 

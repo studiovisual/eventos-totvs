@@ -1,12 +1,7 @@
 import Link from 'next/link'
-import ImageSlider from './ImageSlider';
-
 import { HiMenu } from 'react-icons/hi'
 
-const slides = [
-  { url: 'https://106fls2rgkkyhcqs83jfq8ey-wpengine.netdna-ssl.com/wp-content/uploads/2020/07/banner-demos-v2.jpg', title: 'Imagem carrossel Totvz' },
-  { url: 'https://106fls2rgkkyhcqs83jfq8ey-wpengine.netdna-ssl.com/wp-content/uploads/2022/07/shutterstock_1237494658_H.png', title: 'Imagem carrossel Totvz' }
-]
+import SimpleSlider from './SimpleSlider';
 
 export default function Header() {
   return (
@@ -36,9 +31,7 @@ export default function Header() {
         </div>
       </nav >
       <section className=''>
-        <div className='w-full h-[780px] m-0-auto'>
-          <ImageSlider slides={slides} />
-        </div>
+        <SimpleSlider />
       </section>
     </>
   )
