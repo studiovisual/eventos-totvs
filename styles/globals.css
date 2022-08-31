@@ -43,3 +43,11 @@ a {
   background-color: rgb(107 72 255 / var(--tw-border-opacity));
   border: 1px solid rgb(107 72 255 / var(--tw-border-opacity));
 }
+
+/*menu on desk*/
+
+@media (min-width: 768px) {
+  .menu {
+    display: flex !important;
+  }
+}

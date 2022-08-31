@@ -15,7 +15,7 @@ export default function Header() {
             <img className='w-full max-w-[160px] h-[48px]' src="https://eventos.totvs.com/wp-content/uploads/2020/03/logo-1.png" alt="" />
             <div className='flex justify-between '>
               <HiMenu className='text-[50px] text-white md:hidden' onClick={() => setAberto(!aberto)} />
-              <ul style={{ display: aberto ? 'block' : 'none' }} className='absolute md:relative top-full md:top-0 left-0 py-7 px-5 md:p-0 z-10 bg-principal-black hidden md:flex items-center justify-center gap-5 w-full text-white font-[15px] font-normal uppercase leading-[22px]'>
+              <ul style={{ display: aberto ? 'block' : 'none' }} className='menu absolute md:relative top-full md:top-0 left-0 py-7 px-5 md:p-0 z-10 bg-principal-black hidden md:flex items-center justify-center gap-5 w-full text-white font-[15px] font-normal uppercase leading-[22px]'>
                 <li className="p-2.5">
                   <Link href="/"><a >Demostrações</a></Link>
                 </li>
