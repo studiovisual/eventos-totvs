@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <>
       <nav>
-        <div className='h-[107px] absolute w-full z-20 bg-transparent flex items-center justify-around top-0 left-0 border-b-2'>
+        <div className='h-[107px] absolute w-full z-20 bg-principal-black flex items-center justify-around top-0 left-0 border-b-2'>
           <div className='container w-full flex item-center justify-between md:h-[51px] max-w-[1106px]'>
             <img className='w-full max-w-[160px] h-[48px]' src="https://eventos.totvs.com/wp-content/uploads/2020/03/logo-1.png" alt="" />
             <div className='flex justify-between '>

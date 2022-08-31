@@ -16,11 +16,15 @@ import { FiFilter } from "react-icons/fi";
 
 
 const Home: NextPage = () => {
+  const list01 = ['Demonstrações2', 'Demonstrações3'];
+  const list02 = ['Demonstrações4', 'Demonstrações5'];
+  const list03 = ['Demonstrações6', 'Demonstrações7'];
+
   return (
     <div>
       <Seo title='Evento TOTVS' description='É um eventos TOTVS' />
       <Header />
-      <main className='container w-full h-full mb-[198px]'>
+      <main className='container w-full h-full mb-[198px] mt-[85px]'>
         <section id='header-main max-w-[345px]'>
           <h1 className='text-center text-[20px] pt-8 mb-8 uppercase font-bold text-principal-black  w-full  md:text-[32px] leading-[60px] '>Todos os <span className='text-complementary-purple'>Eventos</span></h1>
         </section>
@@ -33,9 +37,9 @@ const Home: NextPage = () => {
               </div>
               <div className='border border-complementary-purple  rounded-lg p-2.5 h-full w-full max-w-[255px]'>
                 <div className='mb-[38px]'>
-                  <Filtros text='Demonstração' />
-                  <Filtros text='Segmento' />
-                  <Filtros text='Produto' />
+                  <Filtros text='Demonstração' list={list01} />
+                  <Filtros text='Segmento' list={list02} />
+                  <Filtros text='Produto' list={list03} />
                 </div>
                 <div className='text-center mx-7 mb-[38px]'>
                   <Button text='Filtrar' />

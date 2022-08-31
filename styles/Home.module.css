@@ -9,4 +9,13 @@
   }
 }
 
+/*checkbox */
+#filter label:hover input + span {
+  background-color: #f1f1f1;
+}
+#filter label input:checked + span {
+  background-color: rgb(107 72 255 / var(--tw-border-opacity));
+  border: 1px solid rgb(107 72 255 / var(--tw-border-opacity));
+}
+
 /* --------------------------- */
