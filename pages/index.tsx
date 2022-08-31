@@ -28,14 +28,14 @@ const Home: NextPage = () => {
         <section id='header-main max-w-[345px]'>
           <h1 className='text-center text-[20px] pt-8 mb-8 uppercase font-bold text-principal-black  w-full  md:text-[32px] leading-[60px] '>Todos os <span className='text-complementary-purple'>Eventos</span></h1>
         </section>
-        <div className='grid grid-cols-1 lg:grid-cols-[255px_1fr] gap-[30px]'>
-          <section id='filter' className='mb-8 lg:w-64'>
+        <div className='grid grid-cols-1 md:grid-cols-[255px_1fr] gap-[30px]'>
+          <section id='filter' className='mb-8 md:w-64'>
             <div >
               <div className='flex items-center justify-start mb-[26px] text-[25px]'>
                 <FiFilter />
                 <h2 className='text-[26px] ml-[9px] leading-[32px] uppercase font-bold text-principal-black'>Filtro</h2>
               </div>
-              <div className='border border-complementary-purple  rounded-lg p-2.5 h-full w-full max-w-[255px]'>
+              <div className='border border-complementary-purple  rounded-lg p-2.5 h-full w-full max-w-full md:max-w-[255px]'>
                 <div className='mb-[38px]'>
                   <Filtros text='Demonstração' list={list01} />
                   <Filtros text='Segmento' list={list02} />
@@ -48,7 +48,7 @@ const Home: NextPage = () => {
             </div>
           </section>
           <section id='eventos'>
-            <div className='grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-[30px] gap-y-[48px] 2xl:grid-cols-3 gap-x-[30px] gap-y-[48px]'>
+            <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-[30px] gap-y-[48px] 2xl:grid-cols-3 gap-x-[30px] gap-y-[48px]'>
               <Eventos />
               <Eventos />
               <Eventos />
