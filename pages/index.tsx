@@ -35,7 +35,7 @@ const Home: NextPage = () => {
 
       <section className='relative mt-[105px]'>
         <SimpleSlider items={banner} />
-        <FaCaretDown className="svg-banner absolute text-white text-[50px] bottom-[20px]"/>
+        <FaCaretDown className="svg-banner relative md:absolute text-black md:text-white text-[50px] bottom-[-20px] md:bottom-[20px]"/>
       </section>
       
       <Eventos />

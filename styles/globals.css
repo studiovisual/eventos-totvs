@@ -103,3 +103,29 @@ a {
 .svg-banner:hover {
   bottom: 10px
 }
+
+@media (max-width: 768px) {
+  .slick-slider .slick-dots {
+    bottom: -20px;
+    position: relative;
+  }
+
+  .slick-slider .slick-dots li button:before {
+    color: #000;
+  }
+
+  .slick-slider .slick-arrow {
+    color: #000;
+    font-size: 24px !important;
+    width: 30px;
+    height: 30px;
+  }
+
+  .slick-slider .slick-arrow.slick-prev {
+    left: 5px;
+  }
+
+  .slick-slider .slick-arrow.slick-next {
+    right: 5px;
+  }
+}

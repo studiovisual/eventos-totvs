@@ -16,25 +16,25 @@ const Card = ({img, title, desc, buttonInfo, buttonLink, calendar}: Props) => {
     return (
         <div className="relative">
             <img alt={"banner"} src={img} />
-            <div className="absolute top-0 left-0 w-full h-full">
-                <div className="container h-5/6 flex wrap justify-between items-center text-white px-24">
-                    <div className="wrap-title w-7/12 grow">
-                        <h2 className="text-[55px] font-bold leading-[60px]">{title}</h2>
+            <div className="relative md:absolute top-0 left-0 w-full h-full mt-[15px] md:mt-0 px-[20px] md:px-0">
+                <div className="container h-5/6 flex wrap justify-between items-center text-black md:text-white px-[20px] md:px-24 flex-col md:flex-row">
+                    <div className="wrap-title w-full md:w-7/12 grow">
+                        <h2 className="text-[32px] md:text-[55px] font-bold leading-[40px] leading-[60px]">{title}</h2>
                         <div className={'text-boolean ' + (calendar ? 'hidden' : 'block')}>
-                            <p className="mb-[42px] mt-[10px] text-[24px] leading-[24px]">{desc}</p>
+                            <p className="mb-[42px] mt-[20px] md:mt-[10px] text-[16px] md:text-[24px] leading-[20px] leading-[24px]">{desc}</p>
                             <a href={buttonLink} className="bg-secundare-orange block border border-secundare-orange delay-100 ease font-normal hover:bg-white hover:text-secundare-orange leading-[19px] max-w-[210px] py-4 px-10 rounded-full text-[16px] text-center text-white transition uppercase font-extrabold">
                                 {buttonInfo}
                             </a>
                         </div>
                     </div>
-                    <div className={"wrap-info relative flex w-5/12 " + (calendar ? 'block' : 'hidden')}>
+                    <div className={"mt-5 wrap-info relative flex w-full md:w-5/12 " + (calendar ? 'block' : 'hidden')}>
                         <div className="mr-[15px] w-[61px] h-[61px] mb-[19px] ">
                             <div className=" bg-complementary-purple rounded-t-lg text-secundare-gray text-[15px] text-center uppercase flex align-center justify-center ">Mês
                             </div>
                             <div className="bg-white h-[35px] rounded-b-lg text-principal-black text-center font-bold text-[23px] flex align-center justify-center ">00
                             </div>
                         </div>
-                        <div className="info w-1/2 leading-6">
+                        <div className="info w-full md:w-1/2 leading-6">
                             <p className="text-secundare-orange">
                                 WEBINARS
                             </p>
