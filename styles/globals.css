@@ -51,3 +51,55 @@ a {
     display: flex !important;
   }
 }
+
+/*dots*/
+.slick-slider .slick-dots li button:before {
+  font-size: 20px;
+  padding: 0;
+  color: #fff;
+  opacity: .8;
+}
+
+.slick-slider .slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #FEAC0E;
+  font-size: 20px;
+}
+
+.slick-slider .slick-dots {
+  bottom: 110px;
+  z-index: 9;
+}
+.slick-slider .slick-arrow {
+  z-index: 1;
+  font-size: 50px;
+  width: 50px;
+  height: 50px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.slick-slider .slick-arrow:hover {
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.slick-slider .slick-arrow.slick-prev {
+  left: 20px;
+}
+.slick-slider .slick-arrow.slick-next {
+  right: 20px;
+}
+
+/*arrows */
+
+.arrows {
+  top: calc(40% - 25px);
+}
+
+/*svg slider*/
+.svg-banner  {
+  left: calc(50% - 25px);
+  transition: .3s;
+}
+
+.svg-banner:hover {
+  bottom: 10px
+}

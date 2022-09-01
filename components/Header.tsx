@@ -2,8 +2,6 @@ import Link from 'next/link'
 import { HiMenu } from 'react-icons/hi'
 import { useState } from "react";
 
-import SimpleSlider from './SimpleSlider';
-
 export default function Header() {
   const [aberto, setAberto] = useState(false);
 
@@ -33,9 +31,6 @@ export default function Header() {
           </div>
         </div>
       </nav >
-      <section className=''>
-        <SimpleSlider />
-      </section>
     </>
   )
 }
