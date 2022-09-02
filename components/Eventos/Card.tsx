@@ -1,6 +1,6 @@
-import ButtonCover from "./buttonCover";
+import ButtonCover from '../buttonCover'
 
-const Eventos = () => {
+const Card = () => {
   return (
     <>
       <div className="border border-complementary-purple w-full h-full lg:h-[421px] max-w-full md:max-w-[255px] rounded-lg">
@@ -42,4 +42,4 @@ const Eventos = () => {
   );
 };
 
-export default Eventos;
+export default Card
