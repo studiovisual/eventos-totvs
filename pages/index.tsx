@@ -15,10 +15,9 @@ import { FiFilter } from "react-icons/fi";
 
 
 
-const Home: NextPage = () => {
-  const list01 = ['Demonstrações2', 'Demonstrações3'];
-  const list02 = ['Demonstrações4', 'Demonstrações5'];
-  const list03 = ['Demonstrações6', 'Demonstrações7'];
+const Home: NextPage = ({ data_events, data_filters } : any) => {
+  const events = data_events.result;
+  const filters = data_filters.result;
 
   return (
     <div>
@@ -37,9 +36,11 @@ const Home: NextPage = () => {
               </div>
               <div className='border border-complementary-purple  rounded-lg p-2.5 h-full w-full max-w-full md:max-w-[255px]'>
                 <div className='mb-[38px]'>
-                  <Filtros text='Demonstração' list={list01} />
-                  <Filtros text='Segmento' list={list02} />
-                  <Filtros text='Produto' list={list03} />
+                  {filters.length > 0 && filters.map((item : any) => (
+                    <>
+                      <Filtros text={item.groupName} list={item.subgroups} />
+                    </>
+                  ))}
                 </div>
                 <div className='text-center mx-7 mb-[38px]'>
                   <Button text='Filtrar' />
@@ -49,12 +50,12 @@ const Home: NextPage = () => {
           </section>
           <section id='eventos'>
             <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-[30px] gap-y-[48px] 2xl:grid-cols-3 gap-x-[30px] gap-y-[48px]'>
-              <Eventos />
-              <Eventos />
-              <Eventos />
-              <Eventos />
-              <Eventos />
-              <Eventos />
+            
+              {events.length > 0 && events.map((item : any) => (
+                <>
+                  <Eventos data={item} />
+                </>
+              ))}
             </div>
           </section>
         </div>
@@ -103,6 +104,18 @@ const Home: NextPage = () => {
       </footer >
     </div >
   )
+}
+
+// This gets called on every request
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const events = await fetch(`https://ticket.dev.store.totvs.com/api/ticket/page/siteEvent`)
+  const filters = await fetch(`https://ticket.dev.store.totvs.com/api/ticket/page/siteEvent/groups`)
+  const data_events = await events.json()
+  const data_filters = await filters.json()
+
+  // Pass data to the page via props
+  return { props: { data_events, data_filters } }
 }
 
 export default Home
