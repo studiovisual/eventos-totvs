@@ -1,7 +1,7 @@
 import React from 'react'
 import {FiFilter} from 'react-icons/fi'
 import Button from '../Button'
-import Filtro from './Filtro'
+import Filtro from '../GroupFilters'
 
 const Filtros = () => {
     const list01 = ['Demonstrações2', 'Demonstrações3'];

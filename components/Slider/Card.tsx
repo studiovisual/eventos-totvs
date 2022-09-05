@@ -13,7 +13,6 @@ interface Props {
 }
 
 const Card = ({img, imgMobile, title, desc, buttonInfo, buttonLink, calendar}: Props) => {
-    console.log('Card')
     return (
         <div className="relative">
             <img className="w-full desk" alt={"banner"} src={img} />
