@@ -14,6 +14,7 @@ interface Props {
 
 interface Slider {
     img: string,
+    imgMobile: string,
     title: string,
     desc: string,
     buttonInfo: string,
@@ -39,6 +40,7 @@ const SimpleSlider = ({items}: Props) => {
                 <Card
                     key={i}
                     img={item.img}
+                    imgMobile={item.imgMobile}
                     title={item.title}
                     desc={item.desc}
                     buttonInfo={item.buttonInfo}

@@ -104,21 +104,62 @@ a {
   bottom: 10px
 }
 
+.curve {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.curve svg {
+  max-width: 460px;
+  margin: 0 auto
+}
+
+.curve:before {
+  content: '';
+  width: 35%;
+  background: #fff;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+.curve:after {
+  content: '';
+  width: 35%;
+  background: #fff;
+  height: 100%;
+  top: 0;
+  right: 0;
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+
+.slick-slide img.desk {
+  display: block;
+}
+
+.slick-slide img.mobile {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .slick-slider .slick-dots {
-    bottom: -20px;
-    position: relative;
-  }
-
-  .slick-slider .slick-dots li button:before {
-    color: #000;
+    bottom: 12%;
   }
 
   .slick-slider .slick-arrow {
-    color: #000;
+    color: #ffffff;
     font-size: 24px !important;
     width: 30px;
     height: 30px;
+    top: inherit;
+    bottom: 10%;
+    z-index: 10;
   }
 
   .slick-slider .slick-arrow.slick-prev {
@@ -127,5 +168,23 @@ a {
 
   .slick-slider .slick-arrow.slick-next {
     right: 5px;
+  }
+
+  .slick-slide img.mobile {
+    display: block;
+  }
+
+  .slick-slide img.desk {
+    display: none;
+  }
+  .curve svg {
+    width: 100%;
+    max-width: 100%;
+  }
+  .curve:before {
+    content: none;
+  }
+  .curve:after {
+    content: none;
   }
 }
