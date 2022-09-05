@@ -8,16 +8,25 @@ import Social from '../components/Social'
 import TitleFooter from '../components/TitleFooter'
 import Header from '../components/Header'
 
-
 {/* Importação de icons */ }
 import { FiFilter } from "react-icons/fi";
-
-
-
+import { useEffect } from 'react'
 
 const Home: NextPage = ({ data_events, data_filters } : any) => {
   const events = data_events.result;
   const filters = data_filters.result;
+
+  const handleSubmit = (event : any) => {
+    // alert('Teste')
+    // https://ticket.dev.store.totvs.com/api/ticket/page/siteEvent
+    console.log(event)
+    event.preventDefault()
+    // event.target.map(() => )
+  }
+
+  useEffect(() => {
+    // alert('Teste')
+  }, [events])
 
   return (
     <div>
@@ -35,16 +44,18 @@ const Home: NextPage = ({ data_events, data_filters } : any) => {
                 <h2 className='text-[26px] ml-[9px] leading-[32px] uppercase font-bold text-principal-black'>Filtro</h2>
               </div>
               <div className='border border-complementary-purple  rounded-lg p-2.5 h-full w-full max-w-full md:max-w-[255px]'>
-                <div className='mb-[38px]'>
-                  {filters.length > 0 && filters.map((item : any) => (
-                    <>
-                      <Filtros text={item.groupName} list={item.subgroups} />
-                    </>
-                  ))}
-                </div>
-                <div className='text-center mx-7 mb-[38px]'>
-                  <Button text='Filtrar' />
-                </div>
+                <form onSubmit={handleSubmit}>
+                  <div className='mb-[38px]'>
+                    {filters.length > 0 && filters.map((item : any) => (
+                      <>
+                        <Filtros text={item.groupName} list={item.subgroups} />
+                      </>
+                    ))}
+                  </div>
+                  <div className='text-center mx-7 mb-[38px]'>
+                    <Button text='Filtrar' />
+                  </div>
+                </form>
               </div>
             </div>
           </section>
