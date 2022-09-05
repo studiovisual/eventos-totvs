@@ -13,30 +13,9 @@ import { FaCaretDown } from 'react-icons/fa'
 import { FiFilter } from "react-icons/fi";
 import Title from "../components/Title"
 
-const Home: NextPage = ({ data_events, data_filters } : any) => {
-  const banner = [
-    {
-      img: './hero-banner-home.png',
-      imgMobile: './hero-banner-home-mobile.png',
-      title: 'PARTICIPE DAS NOSSAS DEMONSTRAÇÕES',
-      desc: 'Conheça nossos produtos e tire suas dúvidas com nossos especialistas.',
-      buttonInfo: 'Saiba mais',
-      buttonLink: '',
-      calendar: false,
-    },
-    {
-      img: './hero-banner-home-roxo.png',
-      imgMobile: './hero-banner-home-roxo-mobile.png',
-      title: 'CONHEÇA AS INOVAÇÕES DO NOVO RELEASE',
-      desc: '',
-      buttonInfo: '',
-      buttonLink: '',
-      calendar: true,
-    }]
-
+const Home: NextPage = ({ data_events, data_filters, data_banners } : any) => {
   const events = data_events.result;
   const filters = data_filters.result;
-  console.log(filters)
 
   // const handleSubmit = (event : any) => {
   //   // alert('Teste')
@@ -58,7 +37,7 @@ const Home: NextPage = ({ data_events, data_filters } : any) => {
         <Header />
 
         <section className="relative mt-[105px]">
-          <SimpleSlider items={banner} />
+          <SimpleSlider items={data_banners} />
 
           <FaCaretDown className="svg-banner absolute text-white text-[50px] bottom-[0] bottom-[20px]"/>
         </section>
@@ -108,15 +87,17 @@ const Home: NextPage = ({ data_events, data_filters } : any) => {
 }
 
 // This gets called on every request
-export async function getServerSideProps() {
+export async function getStaticProps() {
   // Fetch data from external API
+  const banners = await fetch(`https://ticket.dev.store.totvs.com/api/ticket/page/siteEvent/banners?includeAllChildren=1`)
   const events = await fetch(`https://ticket.dev.store.totvs.com/api/ticket/page/siteEvent`)
   const filters = await fetch(`https://ticket.dev.store.totvs.com/api/ticket/page/siteEvent/groups`)
+  const data_banners = await banners.json()
   const data_events = await events.json()
   const data_filters = await filters.json()
 
   // Pass data to the page via props
-  return { props: { data_events, data_filters } }
+  return { props: { data_events, data_filters, data_banners } }
 }
 
 export default Home
