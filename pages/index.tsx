@@ -36,7 +36,7 @@ const Home: NextPage = ({ data_events, data_filters, data_banners } : any) => {
 
         <Header />
 
-        <section className="relative mt-[105px]">
+        <section className="relative">
           <SimpleSlider items={data_banners} />
 
           <FaCaretDown className="svg-banner absolute text-white text-[50px] bottom-[0] bottom-[20px]"/>

@@ -22,9 +22,7 @@ const Card = ({img, imgMobile, title, desc, buttonInfo, buttonLink, event}: any)
 
   return (
     <div className="relative">
-      <img className="w-full max-w-[1920px] h-[975px] object-cover desk" alt={title} src={img} />
-
-      <img className="w-full max-w-[1920px] h-[975px] object-cover mobile" alt={title} src={imgMobile} />
+      <img className="w-full h-[975px] object-cover" alt={title} src={img} />
 
       <div className="absolute top-0 left-0 w-full h-full mt-[15px] md:mt-0 px-[20px] md:px-0">
         <div className={'container h-5/6 flex wrap justify-center md:justify-between items-center text-white px-[20px] md:px-24 flex-col md:flex-row ' + (event ? 'pt-6' : 'pt-[110px] md:pt-0')}>
