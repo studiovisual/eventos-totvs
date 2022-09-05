@@ -1,7 +1,6 @@
 import React, { useEffect } from "react"
 import Footer from '../components/Footer'
 import type { NextPage } from 'next'
-
 import Seo from '../components/Seo'
 import Header from '../components/Header'
 import SimpleSlider from '../components/Slider/default'
