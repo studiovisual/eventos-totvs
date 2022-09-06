@@ -23,7 +23,7 @@ const GroupFilters = ({ text, list }: Props) => {
         {list.length > 0 && list.map((item : any) => (
           <li className="py-1" key={item.id}>
             <label className="flex items-center relative">
-              <input type="checkbox" name={item.name} />
+              <input className="filter" type="checkbox" name={item.name} value={item.id} />
 
               <span className="border border-black absolute top-1 left-0 h-[15px] w-[15px] bg-white borde-radius-[2px]"></span>
 

@@ -80,7 +80,7 @@ const Card = ({img, imgMobile, title, desc, buttonInfo, buttonLink, event}: any)
                   </div>
 
                   <div className="btn flex items-center justofy-between mt-5 md:mt-0">
-                    <a href="" className="bg-secundare-orange block border border-secundare-orange delay-100 ease font-normal hover:bg-white hover:text-secundare-orange leading-[19px] max-w-[170px] py-2.5 px-4 rounded-full text-[16px] text-center text-white transition uppercase font-extrabold">
+                    <a href="#" className="bg-secundare-orange block border border-secundare-orange delay-100 ease font-normal hover:bg-white hover:text-secundare-orange leading-[19px] max-w-[170px] py-2.5 px-4 rounded-full text-[16px] text-center text-white transition uppercase font-extrabold">
                       Inscreva-se
                     </a>
 

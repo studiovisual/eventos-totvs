@@ -118,7 +118,7 @@ a {
 
 .curve:before {
   content: '';
-  width: 35%;
+  width: calc(50% - 230px);
   background: #fff;
   height: 100%;
   top: 0;
@@ -129,7 +129,7 @@ a {
 }
 .curve:after {
   content: '';
-  width: 35%;
+  width: calc(50% - 230px);
   background: #fff;
   height: 100%;
   top: 0;

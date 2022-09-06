@@ -23,8 +23,6 @@ interface Slider {
 }
 
 const SimpleSlider = ({items}: any) => {
-  console.log(items);
-
   const settings = {
     dots: true,
     arrows: true,

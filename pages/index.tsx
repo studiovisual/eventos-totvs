@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import Footer from '../components/Footer'
 import type { NextPage } from 'next'
 import Seo from '../components/Seo'
@@ -14,20 +14,35 @@ import { FiFilter } from "react-icons/fi";
 import Title from "../components/Title"
 
 const Home: NextPage = ({ data_events, data_filters, data_banners } : any) => {
-  const events = data_events.result;
+  const [events, setEvents] = useState(data_events.result);
   const filters = data_filters.result;
 
-  // const handleSubmit = (event : any) => {
-  //   // alert('Teste')
-  //   // https://ticket.dev.store.totvs.com/api/ticket/page/siteEvent
-  //   console.log(event)
-  //   event.preventDefault()
-  //   // event.target.map(() => )
-  // }
+  const handleSubmit = (event: any) => {
+    event.preventDefault()
+    
+    const subGroup: any = [];
+    const inputs: any = event.target;
 
-  // useEffect(() => {
-  //   // alert('Teste')
-  // }, [events])
+    for (let index = 0; index < inputs.length; index++) {
+      const element = inputs[index];
+      
+      if (element.checked) {
+        subGroup.push(Number(element.value))
+      }
+    }
+
+    if (subGroup.length === 0) {
+      setEvents(data_events.result)
+    }
+
+    if (subGroup.length > 0) {
+      fetch('https://ticket.dev.store.totvs.com/api/ticket/page/siteEvent?subgroup=[' + subGroup + ']')
+      .then((res) => res.json())
+      .then((data) => {
+        setEvents(data.result)
+      })
+    }
+  }
 
   return (
     <>
@@ -56,7 +71,7 @@ const Home: NextPage = ({ data_events, data_filters, data_banners } : any) => {
                   <h2 className="text-[26px] ml-[9px] leading-[32px] uppercase font-bold text-principal-black">Filtro</h2>
                 </div>
                 
-                <div className="border border-complementary-purple  rounded-lg p-2.5 h-full w-full max-w-full md:max-w-[255px]">
+                <form onSubmit={handleSubmit} className="border border-complementary-purple  rounded-lg p-2.5 h-full w-full max-w-full md:max-w-[255px]">
                   <div className="mb-[38px]">
                     {filters.map((filter: any, index: number) => (
                       <GroupFilters key={index} text={filter.groupName} list={filter.subgroups} />
@@ -66,15 +81,19 @@ const Home: NextPage = ({ data_events, data_filters, data_banners } : any) => {
                   <div className="text-center mx-7 mb-[38px]">
                     <Button text="Filtrar" />
                   </div>
-                </div>
+                </form>
               </div>
             </section>
 
             <section id="eventos">
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-[30px] gap-y-[48px] 2xl:grid-cols-3 gap-x-[30px] gap-y-[48px]">
-                {events.map((event: any, index: number) => (
+                {events?.map((event: any, index: number) => (
                   <Card key={index} data={event} />
                 ))}
+
+                {!events && (
+                  <h3 className="text-center">Nenhum evento encontrado</h3>
+                )}
               </div>
             </section>
           </div>
