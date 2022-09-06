@@ -9,7 +9,7 @@ import Button from '../components/Button'
 import Card from '../components/Card'
 
 {/* Importação de icons */ }
-import { FaCaretDown } from 'react-icons/fa'
+import { FaCaretDown, FaWindows } from 'react-icons/fa'
 import { FiFilter } from "react-icons/fi";
 import Title from "../components/Title"
 
@@ -54,10 +54,12 @@ const Home: NextPage = ({ data_events, data_filters, data_banners } : any) => {
         <section className="relative">
           <SimpleSlider items={data_banners} />
 
-          <FaCaretDown className="svg-banner absolute text-white text-[50px] bottom-[0] bottom-[20px]"/>
+          <a href="#main">
+            <FaCaretDown className="svg-banner absolute text-white text-[50px] bottom-[0] bottom-[20px]"/>
+          </a>
         </section>
 
-        <main className="container w-full h-full mb-[198px]">
+        <main id="main" className="container w-full h-full mb-[198px]">
           <section id="header-main max-w-[345px]">
             <Title />
           </section>
