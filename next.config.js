@@ -10,6 +10,7 @@ const nextConfig = {
       '/': { page: '/' },
     }
   },
+  useFileSystemPublicRoutes: false,
 }
 
 module.exports = nextConfig
